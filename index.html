@@ -2,7 +2,6 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,17 +9,90 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Профнастил в Горловке по низким ценам</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      Купить профнастил и гибочные изделия в Горловке по низким ценам
+    </title>
+    <meta
+      name="title"
+      content="Купить профнастил и гибочные изделия в Горловке по низким ценам"
+    />
+    <meta
+      name="description"
+      content="Профнастил, металлочерепица, гибочные изделия под заказ и индивидуальным размерам, профильная труба различных размеров, гладкий лист в Горловке по низким ценам. Доставка на объект или самовывоз с склада. Есть все необходимые материалы для установки забора и кровли. Большой ассортимент металлопродукции в Горловке."
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opengraphgenerator.com/" />
+    <meta
+      property="og:title"
+      content="Купить профнастил и гибочные изделия в Горловке по низким ценам"
+    />
+    <meta
+      property="og:description"
+      content="Профнастил, металлочерепица, гибочные изделия под заказ и индивидуальным размерам, профильная труба различных размеров, гладкий лист в Горловке по низким ценам. Доставка на объект или самовывоз с склада. Есть все необходимые материалы для установки забора и кровли. Большой ассортимент металлопродукции в Горловке."
+    />
+    <meta
+      property="og:image"
+      content="http://opengraphgenerator.com/images/open-graph-generator.png"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://opengraphgenerator.com/" />
+    <meta
+      property="twitter:title"
+      content="Купить профнастил и гибочные изделия в Горловке по низким ценам"
+    />
+    <meta
+      property="twitter:description"
+      content="Профнастил, металлочерепица, гибочные изделия под заказ и индивидуальным размерам, профильная труба различных размеров, гладкий лист в Горловке по низким ценам. Доставка на объект или самовывоз с склада. Есть все необходимые материалы для установки забора и кровли. Большой ассортимент металлопродукции в Горловке."
+    />
+    <meta
+      property="twitter:image"
+      content="http://opengraphgenerator.com/images/open-graph-generator.png"
+    />
   </head>
   <body>
     <header class="header">
       <h2 class="blue"><a href="#main">Профнастил в Горловке</a></h2>
 
       <ul class="header-menu">
-        <li class="header-menu__item"><a href="#">Наши работы</a></li>
-        <li class="header-menu__item"><a href="#">Цены</a></li>
-        <li class="header-menu__item"><a href="#">Контакты</a></li>
-        <li class="header-menu__item"><a href="#">Как нас найти</a></li>
+        <li class="header-menu__item"><a href="#info">О нас</a></li>
+        <li class="header-menu__item">
+          <a href="#realization">Услуги и сервис</a>
+        </li>
+        <li class="header-menu__item">
+          <a href="#delivery">Доставка и оплата</a>
+        </li>
+        <li class="header-menu__item"><a href="#about">Контакты</a></li>
       </ul>
 
       <div class="header-info">
@@ -180,7 +252,7 @@
       </div>
     </main>
 
-    <section class="info">
+    <section class="info" id="info">
       <div class="container section">
         <h2 class="title">
           Более <span class="blue">10 000</span> покупателей выбрали нас в
@@ -269,7 +341,7 @@
       </div>
     </section>
 
-    <section class="realization container section">
+    <section class="realization container section" id="realization">
       <h3 class="subtitle blue">Мы производим и реализуем:</h3>
       <h2 class="title margin-top-16">
         Профилированные стальные листы (профнастил)
@@ -354,7 +426,7 @@
       </div>
     </section>
 
-    <section class="assortment">
+    <section class="assortment" id="assortment">
       <div class="container section">
         <h2 class="title">
           Приобретайте <span class="blue">все в одном месте</span>
@@ -474,7 +546,7 @@
       </div>
     </section>
 
-    <section class="delivery">
+    <section class="delivery" id="delivery">
       <div class="container section delivery-container">
         <div class="delivery-card">
           <div class="delivery-card-icon">
@@ -583,7 +655,7 @@
       </div>
     </section>
 
-    <section class="about container section">
+    <section class="about container section" id="about">
       <h2 class="title">Наши контакты и где нас найти</h2>
 
       <div class="about-contact">
