@@ -13,3 +13,12 @@ for (let smoothLink of smoothLinks) {
     });
   });
 }
+
+const menu = document.querySelector(".header-menu");
+const info = document.querySelector(".header-info");
+const burger = document.querySelector(".header-burger");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("header-burger-active");
+  menu.classList.toggle("header-menu-active");
+  info.classList.toggle("header-info-active");
+});

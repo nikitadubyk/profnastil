@@ -1,19 +1,104 @@
 @media (max-width: 1450px) {
   .header {
+    h2 {
+      font-size: 24px;
+    }
     &-menu {
+      gap: unset;
       &__item {
         a {
-          font-size: 20px;
+          font-size: 18px;
         }
+      }
+    }
+    &-info {
+      a {
+        font-size: 18px;
+      }
+      P {
+        font-size: 14px;
       }
     }
   }
 }
 
 @media (max-width: 1200px) {
+  .header {
+    &-title {
+      display: none;
+    }
+    &-menu {
+      gap: unset;
+      &__item {
+        a {
+          padding: 8px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .header {
+    position: relative;
+    &-title {
+      display: block;
+    }
+    &-menu {
+      gap: unset;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      transition: 0.5s all;
+      background-color: #000;
+      height: 100vh;
+      width: 70vw;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-active {
+        left: 0;
+      }
+      &__item {
+        a {
+          color: #fff;
+          padding: 8px;
+        }
+      }
+    }
+
+    &-burger {
+      gap: 8px;
+      width: 48px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 16px;
+        transition: 0.3s all;
+        background-color: #000;
+      }
+
+      &-active {
+        span {
+          &:nth-child(2) {
+            display: none;
+          }
+          &:first-child {
+            transform: rotate(45deg);
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+            margin-top: -12px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
