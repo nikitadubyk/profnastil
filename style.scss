@@ -148,6 +148,7 @@ a {
 html * {
   font-family: "Montserrat", sans-serif;
   scroll-margin: 97px;
+  box-sizing: border-box;
 }
 
 img {
@@ -224,6 +225,9 @@ p {
     display: flex;
     min-height: 48px;
     align-items: center;
+    &-mobile {
+      display: none;
+    }
     &__item {
       height: 100%;
       a {
@@ -245,11 +249,6 @@ p {
       font-size: 24px;
       font-weight: 600;
     }
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
