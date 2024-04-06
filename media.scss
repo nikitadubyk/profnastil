@@ -55,6 +55,17 @@
       flex-direction: column;
     }
   }
+  .assortment {
+    &-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .about {
+    &-contact {
+      gap: 24px;
+      flex-direction: column;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -62,7 +73,6 @@
     width: 90vw;
   }
   .header {
-    position: relative;
     min-height: 64px;
     &-title {
       display: block;
@@ -165,6 +175,28 @@
   .title {
     font-size: 32px;
   }
+  .assortment {
+    &-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .production {
+    &-container {
+      flex-direction: column;
+    }
+    &-card {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .delivery {
+    &-container {
+      gap: 40px;
+      flex-direction: column;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -194,6 +226,18 @@
           width: 280px;
           height: 200px;
         }
+      }
+    }
+  }
+  .assortment {
+    &-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .production {
+    &-card {
+      img {
+        height: 280px;
       }
     }
   }

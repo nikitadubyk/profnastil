@@ -457,7 +457,7 @@
       </div>
     </section>
 
-    <!-- <section class="assortment" id="assortment">
+    <section class="assortment" id="assortment">
       <div class="container section">
         <h2 class="title">
           Приобретайте <span class="blue">все в одном месте</span>
@@ -530,9 +530,9 @@
           <span class="bold">доставить все в нужное время.</span>
         </p>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="production">
+    <section class="production">
       <div class="container section">
         <h2>
           <span class="blue">Собственное производство</span> гибочных изделий в
@@ -575,9 +575,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="delivery" id="delivery">
+    <section class="delivery" id="delivery">
       <div class="container section delivery-container">
         <div class="delivery-card">
           <div class="delivery-card-icon">
@@ -641,9 +641,9 @@
           <p>Предлагаем выгодные цены при оптовой закупке.</p>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="order">
+    <section class="order">
       <div class="container section">
         <h2 class="title">
           От заявки до отгрузки <span class="blue">всего 4 шага!</span>
@@ -684,9 +684,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="about container section" id="about">
+    <section class="about container section" id="about">
       <h2 class="title">Наши контакты и где нас найти</h2>
 
       <div class="about-contact">
@@ -704,11 +704,50 @@
             async
             charset="utf-8"
             type="text/javascript"
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac2508698d0d4e4efc04ad4586ee1a804cb220604cba55b467ceec2bcc69f6fe&amp;width=600&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aac2508698d0d4e4efc04ad4586ee1a804cb220604cba55b467ceec2bcc69f6fe&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
           ></script>
         </div>
       </div>
-    </section> -->
+    </section>
+
+    <button data-micromodal-trigger="modal-1">OPEN MODAL</button>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1">
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <p>
+              Try hitting the <code>tab</code> key and notice how the focus
+              stays within the modal itself. Also, <code>esc</code> to close
+              modal.
+            </p>
+          </main>
+          <footer class="modal__footer">
+            <button class="modal__btn modal__btn-primary">Continue</button>
+            <button
+              class="modal__btn"
+              data-micromodal-close
+              aria-label="Close this dialog window"
+            >
+              Close
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
