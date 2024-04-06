@@ -1,4 +1,6 @@
+import IMask from "imask";
 import MicroModal from "micromodal";
+import JustValidate from "just-validate";
 
 import "./modal.scss";
 import "./style.scss";
@@ -48,12 +50,65 @@ function closeOnClick() {
   menu.classList.remove("header-menu-mobile-active");
 }
 
-const button = document.querySelector("#send");
-button.addEventListener("click", async (e) => {
-  e.preventDefault();
-  const TELEGRAM_KEY = import.meta.env.VITE_TELEGRAM_KEY;
-  const CHAT_ID = import.meta.env.VITE_CHAT_ID;
-  await fetch(
-    `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${CHAT_ID}&text=test`
-  );
+const validator = new JustValidate("#basic_form");
+
+IMask(document.getElementById("basic_phone"), {
+  mask: "+{7}(000)000-00-00",
 });
+
+function escapeMarkdownV2(text) {
+  const escapeChars = "_*[]()~`>#+-=|{}.!";
+  return text
+    .split("")
+    .map((char) => (escapeChars.includes(char) ? "\\" + char : char))
+    .join("");
+}
+
+validator
+  .addField("#basic_name", [
+    {
+      rule: "required",
+      errorMessage: "Введите ваше имя",
+    },
+    {
+      value: 3,
+      rule: "minLength",
+      errorMessage: "Имя слишком короткое",
+    },
+    {
+      value: 30,
+      rule: "maxLength",
+      errorMessage: "Имя слишком длинное",
+    },
+  ])
+  .addField("#basic_phone", [
+    {
+      rule: "required",
+      errorMessage: "Введите ваш телефон",
+    },
+    {
+      rule: "customRegexp",
+      errorMessage: "Телефон не правильный",
+      value: /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/,
+    },
+  ])
+  .onSuccess(async (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("basic_name").value;
+    const phone = document.getElementById("basic_phone").value;
+    const text = document.getElementById("basic_text").value;
+
+    const TELEGRAM_KEY = import.meta.env.VITE_TELEGRAM_KEY;
+    const CHAT_ID = import.meta.env.VITE_CHAT_ID;
+    const message = `*Пришла новая заявка\\!*  *Имя:* ${name}  *Телефон:* ${escapeMarkdownV2(
+      phone
+    )}  *Сообщение:* ${text}`;
+    try {
+      await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${CHAT_ID}&text=${message}&parse_mode=MarkdownV2`
+      ).then((result) => console.log(result));
+    } catch (error) {
+      console.error("Catch Error:", error);
+    }
+  });

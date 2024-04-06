@@ -729,11 +729,34 @@
             ></button>
           </header>
           <main class="modal__content" id="modal-1-content">
-            <p>
-              Try hitting the <code>tab</code> key and notice how the focus
-              stays within the modal itself. Also, <code>esc</code> to close
-              modal.
-            </p>
+            <form id="basic_form">
+              <div class="control-wrapper">
+                <label class="input-label" for="basic_name">Имя</label>
+                <div class="input-wrapper">
+                  <input type="text" id="basic_name" placeholder="Имя" />
+                </div>
+              </div>
+              <div class="control-wrapper">
+                <label class="input-label" for="basic_phone">Телефон</label>
+                <div class="input-wrapper">
+                  <input id="basic_phone" type="tel" placeholder="Телефон" />
+                </div>
+              </div>
+              <div class="control-wrapper">
+                <label class="input-label" for="basic_text">Текст</label>
+                <div class="input-wrapper">
+                  <textarea
+                    id="basic_text"
+                    class="input"
+                    placeholder="Текст"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="control-wrapper">
+                <button type="submit" class="button">Submit</button>
+              </div>
+            </form>
           </main>
           <footer class="modal__footer">
             <button class="modal__btn modal__btn-primary">Continue</button>
