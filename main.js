@@ -101,9 +101,9 @@ validator
 
     const TELEGRAM_KEY = import.meta.env.VITE_TELEGRAM_KEY;
     const CHAT_ID = import.meta.env.VITE_CHAT_ID;
-    const message = `*Пришла новая заявка\\!*  *Имя:* ${name}  *Телефон:* ${escapeMarkdownV2(
+    const message = `*Пришла новая заявка\\!*%0A*Имя:* ${name}%0A*Телефон:* ${escapeMarkdownV2(
       phone
-    )}  *Сообщение:* ${text}`;
+    )}%0A*Сообщение:* ${text}`;
     try {
       await fetch(
         `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${CHAT_ID}&text=${message}&parse_mode=MarkdownV2`
