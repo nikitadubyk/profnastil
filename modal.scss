@@ -15,7 +15,8 @@
 
 .modal__container {
   background-color: #fff;
-  padding: 30px;
+  padding: 24px;
+  width: 100%;
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
@@ -51,8 +52,7 @@
 }
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 24px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -94,6 +94,19 @@
 .modal__btn-primary {
   background-color: #00449e;
   color: #fff;
+}
+
+.modal__footer {
+  gap: 24px;
+  display: flex;
+  margin-top: 24px;
+  justify-content: flex-end;
+}
+
+.modal__form {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 /**************************\

@@ -15,6 +15,7 @@
   "dependencies": {
     "imask": "^7.5.0",
     "just-validate": "^4.3.0",
-    "micromodal": "^0.4.10"
+    "micromodal": "^0.4.10",
+    "toastr": "^2.1.4"
   }
 }

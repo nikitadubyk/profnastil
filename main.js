@@ -1,4 +1,5 @@
 import IMask from "imask";
+import toastr from "toastr";
 import MicroModal from "micromodal";
 import JustValidate from "just-validate";
 
@@ -101,14 +102,26 @@ validator
 
     const TELEGRAM_KEY = import.meta.env.VITE_TELEGRAM_KEY;
     const CHAT_ID = import.meta.env.VITE_CHAT_ID;
-    const message = `*Пришла новая заявка\\!*%0A*Имя:* ${name}%0A*Телефон:* ${escapeMarkdownV2(
+    let message = `*Пришла новая заявка\\!*%0A*Имя:* ${name}%0A*Телефон:* ${escapeMarkdownV2(
       phone
-    )}%0A*Сообщение:* ${text}`;
+    )}`;
+    if (text.trim().length > 0) {
+      message += `%0A*Сообщение:* ${text}`;
+    }
     try {
       await fetch(
         `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${CHAT_ID}&text=${message}&parse_mode=MarkdownV2`
-      ).then((result) => console.log(result));
+      );
+      MicroModal.close("modal-1");
+      document.getElementById("basic_form").reset();
+      toastr.success(
+        "Заявка отправлена успешно, наш менеджер с вами свяжется",
+        { timeOut: 5000 }
+      );
     } catch (error) {
+      toastr.error("Не удалось отправить заявку, попробуйте еще", {
+        timeOut: 5000,
+      });
       console.error("Catch Error:", error);
     }
   });

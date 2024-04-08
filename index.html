@@ -123,6 +123,9 @@
           <a href="tel:+79493335291">+7 949 333 52 91</a>
           <a href="tel:+79493426377">+7 949 342 63 77</a>
           <p>Пн - Суб c 08:00 до 16:00</p>
+          <button class="button" data-micromodal-trigger="modal-1">
+            Оставить заявку
+          </button>
         </div>
       </nav>
 
@@ -279,6 +282,13 @@
             </svg>
             <p>Популярные позиции всегда в наличии</p>
           </div>
+
+          <button
+            class="button button-big margin-top-24"
+            data-micromodal-trigger="modal-1"
+          >
+            Оставить заявку
+          </button>
         </div>
       </div>
     </main>
@@ -653,8 +663,13 @@
           <div class="order-info">
             <div class="order-info-step">1</div>
             <p>
-              Звоните по телефону
-              <a href="tel:+79493335291">8 949 333 52 91</a> или
+              <span
+                class="blue cursor-pointer"
+                data-micromodal-trigger="modal-1"
+                >Оставьте заявку</span
+              >
+              на нашем сайте и наш менеджер свяжется с вами или звоните по
+              телефону <a href="tel:+79493335291">8 949 333 52 91</a> или
               <a href="tel:+79493426377">8 949 342 63 77</a>
             </p>
           </div>
@@ -683,6 +698,12 @@
             </p>
           </div>
         </div>
+        <button
+          class="button button-big margin-top-24"
+          data-micromodal-trigger="modal-1"
+        >
+          Оставить заявку
+        </button>
       </div>
     </section>
 
@@ -721,7 +742,7 @@
           aria-labelledby="modal-1-title"
         >
           <header class="modal__header">
-            <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+            <h2 class="modal__title" id="modal-1-title">Оставить заявку</h2>
             <button
               class="modal__close"
               aria-label="Close modal"
@@ -729,17 +750,27 @@
             ></button>
           </header>
           <main class="modal__content" id="modal-1-content">
-            <form id="basic_form">
+            <form id="basic_form" class="modal__form">
               <div class="control-wrapper">
                 <label class="input-label" for="basic_name">Имя</label>
                 <div class="input-wrapper">
-                  <input type="text" id="basic_name" placeholder="Имя" />
+                  <input
+                    class="input"
+                    type="text"
+                    id="basic_name"
+                    placeholder="Имя"
+                  />
                 </div>
               </div>
               <div class="control-wrapper">
                 <label class="input-label" for="basic_phone">Телефон</label>
                 <div class="input-wrapper">
-                  <input id="basic_phone" type="tel" placeholder="Телефон" />
+                  <input
+                    class="input"
+                    id="basic_phone"
+                    type="tel"
+                    placeholder="Телефон"
+                  />
                 </div>
               </div>
               <div class="control-wrapper">
@@ -753,21 +784,21 @@
                 </div>
               </div>
 
-              <div class="control-wrapper">
-                <button type="submit" class="button">Submit</button>
-              </div>
+              <footer class="modal__footer">
+                <button
+                  class="modal__btn"
+                  data-micromodal-close
+                  aria-label="Close this dialog window"
+                >
+                  Закрыть
+                </button>
+
+                <button type="submit" class="modal__btn modal__btn-primary">
+                  Отправить
+                </button>
+              </footer>
             </form>
           </main>
-          <footer class="modal__footer">
-            <button class="modal__btn modal__btn-primary">Continue</button>
-            <button
-              class="modal__btn"
-              data-micromodal-close
-              aria-label="Close this dialog window"
-            >
-              Close
-            </button>
-          </footer>
         </div>
       </div>
     </div>
