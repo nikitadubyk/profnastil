@@ -181,9 +181,6 @@
     }
   }
   .production {
-    &-container {
-      flex-direction: column;
-    }
     &-card {
       img {
         width: 100%;
@@ -235,6 +232,9 @@
     }
   }
   .production {
+    &-container {
+      flex-direction: column;
+    }
     &-card {
       img {
         height: 280px;

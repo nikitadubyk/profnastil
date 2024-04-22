@@ -165,6 +165,10 @@ button {
   all: unset;
 }
 
+.font-size-14 {
+  font-size: 14px;
+}
+
 .button {
   color: $white;
   padding: 8px;
@@ -310,6 +314,9 @@ p {
     a {
       font-size: 24px;
       font-weight: 600;
+      &:last-child {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -496,7 +503,7 @@ p {
     border-radius: 16px;
     box-shadow: $box-shadow;
     img {
-      height: 320px;
+      height: 356px;
       border-radius: 16px;
       object-fit: contain;
     }
